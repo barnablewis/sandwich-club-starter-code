@@ -66,7 +66,9 @@ public class DetailActivity extends AppCompatActivity {
             stringBuilder.append(", ");
         }
         int len = stringBuilder.length();
-        stringBuilder.deleteCharAt(len-3);
+        if (len > 3) {
+            stringBuilder.deleteCharAt(len - 2);
+        }
         return stringBuilder.toString();
 
     }
